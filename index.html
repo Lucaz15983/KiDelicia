@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Assets/logo-favicon.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./styles/output.css" />
+
+    <title>KI Delícia Cardapio</title>
+</head>
+<body>
+<!--Header-->
+    <header>
+<div class="Fixado">
+ <!--Carrinho de compras-->
+<div id="Fixed" class="Fixed">
+    <button class="Carrinho" id="cart-btn">
+        <i class='bx bxs-cart'></i>
+        <span id="Car-point">0</span>
+    </button> 
+</div>
+<!-- FIM Carrinho de compras-->
+
+
+<!--HORARIOS-->
+        <div style="display: grid; place-items: center;">
+            <img src="./Assets/Logo KI-Delicia.png" alt="Logo KI-Delícia" width="128px" height="128px" >
+          </div>
+
+            <div class="hor" id="date-span" >
+                <span class="text-white font-medium">Dom á Dom - 14h ás 22h</span>
+            </div>
+        </div>
+<!--HORARIOS-->
+
+    </header>
+<!--Fim Header-->
+
+<!--GAMBIARRA-->
+<div class="color">
+<div>aksdsamdk0</div>
+<div>skadsaljdsakl</div>
+<div>aksdsamdk0</div>
+<div>skadsaljdsakl</div>
+<div>aksdsamdk0</div>
+<div>skadsaljdsakl</div>
+<div>aksdsamdk0</div>
+<div>skadsaljdsakl</div>
+<div>aksdsamdk0</div>
+<div>skadsaljdsakl</div>
+</div>
+<!--GAMBIARRA-->
+
+
+<!--SLIDESHOW-->
+<div class="cartãoimg">
+    <img id="slideshow-image" class="slideshow" src="./Assets/img 1.png" alt="imagem cartão" src="./Assets/img.png"/>
+</div>
+<!--SLIDESHOW-->
+
+
+<!--NOTIFICAÇÃO-->
+<style>
+    .content {
+      padding: 20px;
+    }
+
+    .notification {
+  display: none; 
+  position: fixed;
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  max-width: 70%; 
+  box-sizing: border-box; 
+  text-align: center; 
+}
+.notification.show {
+  display: block;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); 
+}
+
+    .notification.hide {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  </style>
+ <div id="cart-notification" class="notification">Item adicionado ao carrinho!</div>
+<!--NOTIFICAÇÃO-->
+
+<!--LAnches-->
+    <h2 class="Lanches">Escolha Sua <br>Melhor Refeição!!
+    </h2>
+    <h3 class="texto"> Lanches</h3>
+<!--Fim Laches-->
+
+<!--Menu-->
+    <div id="menu">
+<!--Fim Menu-->
+
+    <main class="main">
+
+<!--PiZZA CALABRESA-->
+<div class="All">
+          <div class="Produtos">
+           <img src="./Assets/1.png" alt="Pizza Calabresa"
+           class="Calabresa"
+           /></div>
+        <div>
+            <p class="Pizza">Mini-Pizza Calabresa</p>
+            <p class="desc">Massa, duas camadas de Queijo, <br>uma camada de Presunto, <br>Oregano e Calabresa.</p>
+
+            <div class="add">
+               <div><p>R$ 15.00</p></div> 
+                <div><button class="botão"
+                data-name="Mini-Pizza Calabresa"
+                data-price=" 15.00">
+                    <span id="ADD" ><i class='bx bxs-cart'></i>
+                    </span>
+                </button>
+            </div>
+            </div>
+        </div>
+    </div>     
+<!--PiZZA CALABRESA-->
+
+<!--PiZZA FRANGO COM BACON-->
+<div class="All">
+    <div class="Produtos">
+     <img src="./Assets/2.png" alt="Pizza Frango Bacon"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Pizza">Mini-Pizza Frango com Bacon</p>
+      <p class="desc">Massa, duas camadas de Queijo, <br>uma camada de Frango, <br>Oregano e Bacon.</p>
+      <div class="add">
+          <p>R$ 15.00</p>
+          <button class="botão"
+          data-name="Mini-Pizza Frango Com Bacon"
+          data-price=" 15.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!--PiZZA FRANGO COM BACON-->
+
+<!--PiZZA FRANGO COM CATUPIRI-->
+<div class="All">
+    <div class="Produtos">
+     <img src="./Assets/3.png" alt="Pizza Frango c/ Catupiri"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Pizza">Mini-Pizza Frango com Catupiry</p>
+      <p class="desc">Massa, duas camadas de Queijo, <br>uma camada de Frango, <br>Oregano e Catupiry.</p>
+      <div class="add">
+          <p>R$ 15.00</p>
+          <button class="botão" 
+          data-name="Mini-Pizza Frango Com Catupiry"
+          data-price=" 15.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!--PiZZA FRANGO COM CATUPIRI-->
+<!--PIZZA-->
+
+<!--PANQUECAS-->
+<!--PANQUECA DE CARNE-->
+<div class="All">
+    <div class="Produtos">
+     <img src="./Assets/4.png" alt="Panqueca de Carne"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Pizza">Panqueca de Carne Moída</p>
+      <p class="desc">Massa, Carne Moída Temperada, <br> Tomate Picado, Cheiro-Verde,<br>  Molho de Tomate, Queijo Ralado.</p>
+      <div class="add">
+          <p>R$ 15.00</p>
+          <button class="botão" 
+          data-name="Panqueca Carne Moída"
+          data-price=" 15.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!--PANQUECA DE CARNE-->
+
+<!--PANQUECA DE FRANGO-->
+<div class="All">
+    <div class="Produtos">
+     <img src="./Assets/5.png" alt="Panqueca de Carne"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Pizza">Panqueca de Frango</p>
+      <p class="desc">Massa, Frango <br>Desfiado Temperado, <br> Tomate Picado,  Cheiro-Verde, <br> Molho de Tomate, Queijo Ralado.</p>
+      <div class="add">
+          <p>R$ 15.00</p>
+          <button class="botão" 
+          data-name="Panqueca de Frango"
+          data-price=" 15.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!--PANQUECA DE FRANGO-->
+<!--PANQUECAS-->
+
+<!--PAMONHA-->
+<!--PAMONHA DOCE-->
+<div class="All">
+    <div class="Produtos">
+     <img src="./Assets/6.png" alt="Pamonhas"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Pizza">Pamonha Doce</p>
+      <p class="desc">Milho Verde Ralado,  Açúcar, <br> Manteiga,  Queijo Mussarela, <br> Palhas de Milho para Envolver.</p>
+      <div class="add">
+          <p>R$ 12.00</p>
+          <button class="botão" 
+          data-name="Pamonha Doce"
+          data-price=" 12.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!--PAMONHA DOCE-->
+
+<!--PAMONHA SAL-->
+<div class="All">
+    <div class="Produtos">
+     <img src="./Assets/6.png" alt="Pamonhas"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Pizza">Pamonha Sal</p>
+      <p class="desc">Milho Verde Ralado,  Sal, <br> Manteiga,  Queijo Mussarela, <br> Palhas de Milho para Envolver.</p>
+      <div class="add">
+          <p>R$ 12.00</p>
+          <button class="botão" 
+          data-name="Pamonha Sal"
+          data-price=" 12.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!--PAMONHA SAL-->
+
+<!--PAMONHA AMODA-->
+<div class="All">
+    <div class="Produtos">
+     <img src="./Assets/6.png" alt="Pamonhas"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Pizza">Pamonha Amoda</p>
+      <p class="desc">Milho Verde Ralado, Sal, <br> Pimenta, Salsinha, Queijo, <br>Salsicha, Palhas de Milho para Envolver.</p>
+      <div class="add">
+          <p>R$ 12.00</p>
+          <button class="botão" 
+          data-name="Pamonha Amoda"
+          data-price=" 12.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!--PAMONHA AMODA-->
+<!-- PAMONHA-->
+
+<!--Bebida Item-->
+                 <div class="AllB">
+                    <h2>Bebidas</h2>
+                 </div>
+
+<!--Bebida Item-->
+
+<!--Tag SUCOS-->
+<div class="AllS">
+    <div class="Jarra">
+     <img src="./Assets/Suco.jpg" alt="Suco"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Pizza">Jarra de Suco 700ml</p>
+      <p class="desc">Sabores: Acerola, Abacaxi, Cajá, <br>Laranja, Goiaba, Maracujá. </p>
+      <div class="Modas">
+          <p>R$ 13.00</p>
+           <button id="openModalBtn">Opções</button>
+      </div>
+ <!-- Modal -->
+ <div id="myModal" class="modal">
+     <div class="modal-content">
+         <span class="close">&times;</span>
+         <div class="items-container">
+             <!-- LARANJA -->
+             <div class="item">
+                <img src="./Assets/Design sem nome (1).jpg" alt="Suco de Laranja">
+                 <p>Suco de Laranja - 700ml</p>
+                 <button class="botão" 
+                 data-name="Suco de Laranja"
+                 data-price=" 13,00">
+                    <span id="Laranja" ><i class='bx bxs-cart'></i>
+                    </span>
+                 </button>
+             </div>
+             <!-- GOIABA -->
+             <div class="item">
+                <img src="./Assets/Design sem nome (2).jpg" alt="Suco de Goiaba">
+                 <p>Suco de Goiaba - 700ml</p>
+                 <button class="botão" 
+                 data-name="Suco de Goiaba"
+                 data-price=" 13,00">
+                    <span id="Laranja" ><i class='bx bxs-cart'></i>
+                    </span>
+                 </button>
+                 
+             </div>
+             <!-- CAJÁ -->
+             <div class="item">
+                <img src="./Assets/Design sem nome (3).jpg" alt="Suco de Cajá">
+                 <p>Suco de Cajá - 700ml</p>
+                 <button class="botão" 
+                 data-name="Suco de Cajá"
+                 data-price=" 13,00">
+                    <span id="Laranja" ><i class='bx bxs-cart'></i>
+                    </span>
+                 </button>
+             </div>
+             <!--ACEROLA -->
+             <div class="item">
+                <img src="./Assets/Suco de Acerola.jpg" alt="Suco de Acerola">
+                 <p>Suco de Acerola - 700ml</p>
+                 <button class="botão" 
+                 data-name="Suco de Acerola"
+                 data-price=" 13,00">
+                    <span id="Laranja" ><i class='bx bxs-cart'></i>
+                    </span>
+                 </button>
+             </div>
+             <!-- MARACUJÁ -->
+             <div class="item">
+                <img src="./Assets/Suco de Maracujá.jpg" alt="Suco de Maracujá">
+                 <p>Suco de Maracujá - 700ml</p>
+                 <button class="botão" 
+                 data-name="Suco de Maracujá"
+                 data-price=" 13,00">
+                    <span id="Laranja" ><i class='bx bxs-cart'></i>
+                    </span>
+                 </button>
+             </div>
+             <!-- ABACAXI -->
+             <div class="item">
+                <img src="./Assets/Suco de Abacaxi.jpg" alt="Suco de Abacaxi ">
+                 <p>Suco de Abacaxi - 700ml</p>
+                 <button class="botão" 
+                 data-name="Suco de Abacaxi"
+                 data-price=" 13,00">
+                    <span id=Abacaxi" ><i class='bx bxs-cart'></i>
+                    </span>
+                 </button>
+             </div>
+         </div>
+     </div>
+ </div>
+</div>     
+</div>
+<!--Tag SUCOS-->
+
+<!--TAG REFRI-->
+<div class="All">
+    <div class="Lata">
+     <img src="./Assets/COCA LATA.jfif" alt="COCA LATA"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Refri">Coca-Cola Lata 350ml</p>
+      <div class="add">
+          <p>R$ 5.00</p>
+          <button class="botão" 
+          data-name="Coca-Cola Lata 350ml"
+          data-price=" 5.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!-- Refri-->
+
+<!--Refri-->
+<div class="All">
+    <div class="Lata">
+     <img src="./Assets/Zero.png" alt="COCA LATA"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Refri">Coca-Cola Lata "Zero" 350ml</p>
+      <div class="add">
+          <p>R$ 5.00</p>
+          <button class="botão" 
+          data-name="Coca-Cola Zero Lata 350ml"
+          data-price=" 5.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!-- Refri-->
+
+<!--Refri-->
+<div class="All">
+    <div class="Lata">
+     <img src="./Assets/guarana lata.png" alt="Guaraná"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Refri">Guaraná Antarctica Lata 350ml</p>
+      <div class="add">
+          <p>R$ 5.00</p>
+          <button class="botão" 
+          data-name="Guaraná Lata 350ml"
+          data-price=" 5.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!-- Refri-->
+
+<!--Refri-->
+<div class="All">
+    <div class="Lata">
+     <img src="./Assets/Pepsi lata1.png" alt="Pespi"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Refri">Pespi Cola Lata 350ml</p>
+      <div class="add">
+          <p>R$ 5.00</p>
+          <button class="botão" 
+          data-name="Pespi Lata 350ml"
+          data-price=" 5.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!-- Refri-->
+
+<!--Refri-->
+<div class="All">
+    <div class="Lata">
+     <img src="./Assets/Pespi.png" alt="Pespi"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Refri">Pespi Cola "Zero" Lata 350ml</p>
+      <div class="add">
+          <p>R$ 5.00</p>
+          <button class="botão" 
+          data-name="Pespi Zero Lata 350ml"
+          data-price=" 5.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!-- Refri-->
+
+<!--Refri-->
+<div class="All">
+    <div class="Lata">
+     <img src="./Assets/Fanta .jpg" alt="Fanta"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Refri">Fanta Laranja Lata 350ml</p>
+      <div class="add">
+          <p>R$ 5.00</p>
+          <button class="botão" 
+          data-name="Fanta Laranja Lata 350ml"
+          data-price=" 5.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!-- Refri-->
+
+<!--Refri-->
+<div class="All">
+    <div class="Lata">
+     <img src="./Assets/Coca 1L.jpg" alt="Coca-Cola"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Refri">Coca-Cola 1L - Pet</p>
+      <div class="add">
+          <p>R$ 8.00</p>
+          <button class="botão" 
+          data-name="Coca-cola 1L"
+          data-price=" 8.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!-- Refri-->
+
+<!--Refri-->
+<div class="All">
+    <div class="Lata">
+     <img src="./Assets/Coca 2l.jpg" alt="Coca-Cola"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Refri">Coca-cola 2L </p>
+      <div class="add">
+          <p>R$ 13.00</p>
+          <button class="botão"
+          data-name="Coca-cola 2L"
+          data-price=" 13.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!-- Refri-->
+
+<!--Refri-->
+<div class="All">
+    <div class="Lata">
+     <img src="./Assets/Guaraná 1L.jpg" alt="Coca-Cola"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Refri">Guaraná Antarctica 1L </p>
+      <div class="add">
+          <p>R$ 8.00</p>
+          <button class="botão" 
+          data-name="Guaraná Antarctica 1L"
+          data-price=" 8.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!-- Refri-->
+
+<!--Refri-->
+<div class="All">
+    <div class="Lata">
+     <img src="./Assets/Guaraná 2L.jpg" alt="Coca-Cola"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Refri">Guaraná Antarctica 2L </p>
+      <div class="add">
+          <p>R$ 11.00</p>
+          <button class="botão" 
+          data-name="Guaraná Antarctica 2L"
+          data-price=" 11.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!-- Refri-->
+
+<!--Refri-->
+<div class="All">
+    <div class="Lata">
+     <img src="./Assets/Pespi 1L.jpg" alt="Coca-Cola"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Refri">Pepsi Cola 1L - Pet </p>
+      <div class="add">
+          <p>R$ 8.00</p>
+          <button class="botão" 
+          data-name="Pepsi Cola 1L"
+          data-price=" 8.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!-- Refri-->
+
+<!--Refri-->
+<div class="All">
+    <div class="Lata">
+     <img src="./Assets/pespi 2L.jpg" alt="Coca-Cola"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Refri">Pepsi Cola 2L  </p>
+      <div class="add">
+         <div><p>R$ 11.00</p></div> 
+         <div> <button class="botão" 
+          data-name="Pepsi Cola 2L"
+          data-price=" 11.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+        </div>
+      </div>
+  </div>
+</div>     
+<!-- Refri-->
+
+<!--Refri-->
+<div class="All">
+    <div class="Lata">
+     <img src="./Assets/Coca Ls.jpg" alt="Coca-Cola"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Refri">Coca-Cola 1L - Retornável </p>
+      <div class="add">
+          <p>R$ 7.00</p>
+          <button class="botão" 
+          data-name="Coca-Cola 1L - Retornável"
+          data-price=" 7.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!-- Refri-->
+
+<!--Refri-->
+<div class="All">
+    <div class="Lata">
+     <img src="./Assets/Guaraná Ls.jpg" alt="Coca-Cola"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Refri">Guaraná Antarctica 1L - Retornável </p>
+      <div class="add">
+          <p>R$ 7.00</p>
+          <button class="botão" 
+          data-name="Guaraná Antarctica 1L - Retornável"
+          data-price=" 7.00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!-- Refri-->
+
+<!--Refri-->
+<div class="All">
+    <div class="Lata">
+     <img src="./Assets/Pespi Ls.jpg" alt="Coca-Cola"
+     class="Calabresa"
+     /></div>
+  <div>
+      <p class="Refri">Pepsi Cola 1L - Retornável </p>
+      <div class="add">
+          <p>R$ 7.00</p>
+          <button class="botão" 
+          data-name="Pepsi Cola 1L - Retornável"
+          data-price=" 7,00">
+              <span id="ADD" ><i class='bx bxs-cart'></i>
+              </span>
+          </button>
+      </div>
+  </div>
+</div>     
+<!-- Refri-->
+<!--TAG REFRI-->
+
+    </main>
+</div>  
+
+
+ <!--Modal Card-->
+    <div class="Modalpreto" id="cart-modal">
+      <div class="ModalBranco">
+        <h2 class="MeuCarrinho">Meu Carrinho</h2>
+
+        <div id="cart-items" class="Car"></div>
+        
+<div class="ModalTotal">
+       <p class="Total">Total: <span id="cart-Total">R$0.00</span></p>
+
+       <p class="Mesa">Nome e Mesa:</p>
+       <input 
+       type="text"
+       placeholder="Digite seu Nome e N° da Mesa"
+       id="address"
+       class="Address">  
+     
+       <p class="Alerta zidden" id="Address-warn">Digite seu Nome e N° da Mesa</p>
+       
+       <div class="pedido">
+        <button id="close-modal-btn" class="Fechar"> Fechar</button>
+        <button id="checkout-btn" class="Finalizar">Finalizar Pedido</button></div>
+      </div>
+      </div>
+    </div>
+     <!--Fim Modal Card-->
+
+
+<!--FOOTER-->
+<footer class="Copy">
+    <p> CNPJ: 55.764.639/0001-35 <br>Copyright © 2003 - 2024  -  All Rights Reserved - KI-Delícia® <br> R.das Camélias, 1196 - Lot. Cruzeiro, Araguaína-TO, 77817-290 - BRAZIL</p>
+</footer>
+<!--FOOTER-->
+
+     <script src="main.js"></script>
+</body>
+</html>
